@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Users</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #db9cd9, #2980b9);
+            height: 100vh;
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom:10px;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #151615;
+            color: white;
+        }
+        td {
+            background-color: whitesmoke;
+        }
+        
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: rgb(60, 60, 214);
+            text-decoration: none;
+            border-radius: 5px;
+        }
+      
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Email ID</th>
+                <th>Phone No.</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                {% for data in registers %}
+                <td>{{data.firstname}}</td>
+                <td>{{data.lastname}}</td>
+                <td>{{data.username}}</td>
+                <td>{{data.password}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.phone}}</td>
+                <td><a href="/delete/{{data.id}}" class="button">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+        <a href="/register" class="button">Add Register</a>
+    </div>
+
+</body>
+</html>

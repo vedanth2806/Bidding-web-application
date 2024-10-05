@@ -1,0 +1,114 @@
+.container {
+    margin: 0 15%;
+}
+
+.grid-container {
+    width: 100hw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 600px 500px;
+    grid-template-rows: 500px 00px;
+    justify-content: center;
+    gap: 50px;
+}
+
+ h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text{
+    display: grid;
+    grid-row:span 2;
+    justify-content:center;
+    align-items:center;
+}
+
+.item,form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: -20px;
+    /* color: white; */
+}
+
+.india{
+    margin-top: 60px;
+}
+
+.india img {
+    height: 20px;
+    margin-bottom: 0px;
+}
+
+.UK{
+    margin-top: 70px;
+}
+
+.UK img {
+    height: 20px;
+    margin-bottom: 0px;
+}
+
+button {
+    padding: 5px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 3px;
+    width: 8rem;
+    height: 2rem;
+}
+
+input,textarea {
+    /* text-align: center; */
+    width: 450px;
+    height: 40px;
+    border: 2px solid rgb(175, 172, 172);
+    border-radius: 7px;
+    background-color: transparent;
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rule {
+    border: none;
+    background-color: orange;
+    height: 4px;
+}
+
+nav button {
+    border: none;
+    cursor: pointer;
+    background-color: orange;
+    margin-top: 10px;
+  }
+  nav {
+    background-color: orange;
+    height: 50px;
+    /* display: flex;
+    justify-content: center; */
+  }
+  .nav-cont1 {
+    margin-left: 250px;
+    margin-right: 250px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav a {
+    text-decoration: none;
+    background-color: orange;
+    color: black;
+    font-size: large;
+  }

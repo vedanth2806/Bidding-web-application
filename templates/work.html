@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block title %}BidderBoy|Best Online Auction{% endblock %}
+
+{% block header_buttons %}
+
+<div class="but" style="margin-left: 400px;">
+    <a href="/work" class="btn">How it Works</a>
+    <a href="/FAQs" class="btn">FAQ's</a>
+    <a href="/contact1" class="btn">Contact Us</a>
+    <a href="/login" class="btn">Login</a>
+    <a href="/register" class="btn">Register</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/howorks/howorks.css">
+<div class="container">
+    <h2>==HOW IT WORKS==</h2>
+    <hr>
+    <ol>
+        <li>Auction starts with Rs.0/- , Each new bid raises the item price by 20 paisa or such smaller amount.</li>
+        <li>The auction clock restarts from 10 or 15 seconds every time someone bids.</li>
+        <li>If no new bids are placed before the clock runs out, the last bidder wins.</li>
+        <li>Before you can take part in an auction you need to buy credits. This small fee makes the massive 89% off savings possible!</li>
+    </ol>
+    <h1>Win an auction or use 'Buy Now'</h1>
+    <hr>
+    <div class="steps" style="margin-left: 60px;">
+        <img src="../static/howorks/step1.png" alt="">
+        <img src="../static/howorks/step2.png" alt="">
+        <img src="../static/howorks/step3.png" alt="">
+        <img src="../static/howorks/step4.png" alt="">
+        <img src="../static/howorks/step5.png" alt="">
+    </div>
+    <p><b>How auction works at bidderboy?</b></p>
+    <p>
+        Bidding on Bidderboy is very easy! Just follow these simple steps: <br><br>
+        Step 1: Sign up & Buy Credits ( Or use your Free Bonus Credits) <br>
+        <br>
+        Registration is free, secure and simple. It takes 10 Seconds to Sign Up. Create your Free Bidderboy account from homepage, verify your Email & Mobile number. Login with your Bidderboy ID. You will get 5 free bonus credits In your account as a welcome bonus. <br>
+        To place bids on any auction, you will need Credits. You can buy Credits by multiple payment methods, including: PayPal, Debit/Credit Cards, VISA, Mastercard, Net Banking, Cash Cards etc.
+Your Credits are stored in your Account; there are few Packages to buy in different pack size of 25, 50, 100, 350, 500, and 1000 etc. <br>
+        <br>
+        To Buy Credits go to TOP UP CREDITS button on top right side of Homepage. Each credit costs you Rs.7/- to Rs.10/- (it depends on Package size you select) Choose your package and Pay online, Credits will be instantly deposited in your account. Credits balance is shown on homepage top area. <br>
+        <br>
+        Once you have enough credits in your wallet , you are ready to go.... <br>
+    </p>
+    <p>
+        Step 2: Click on BID NOW button to bid for a product on LIVE AUCTIONS section
+        <br><br>
+        Choose your products from the amazing deals we have every day at Bidderboy. You can choose to participate in all the auctions you wish. Find your favorite product on Live Auction page and be ready to start bidding when last few minutes/seconds are remaining in Timer. There is no any complicated bidding process. Just Click to Bid, that's it. Each bid will deduct some Credits from your account. Number of Credits required per bid is shown on each product page. i.e 3x means 3 credits deducted per bid. 
+    </p>
+    <p>
+        Step 3:  Start bidding and wait for the timer to reach Zero. 
+        <br><br>
+        Real Competition starts when last few seconds are remaining in timer. Click on the 'BID NOW' button to place your bid. Each time you place a bid, number of Credits will be deducted from your balance, and time to the clock will be added. Time is added to clock every time an user places a 'BID'. This gives enough time for someone else to make the decision to BID if they are interested. If you are the last bidder when the timer expires, YOU WIN! After you Win, you can Claim that product by paying it's Bid Closing Price + Shipping & Processing Charges.
+        <br>
+        If you need to leave your computer and want to continue bidding, don’t worry, you can set the AutoBid to place automatic bids for you. 
+    </p>
+    <p>
+        Can everyone be a winner? What if I don’t win?
+        <br><br>
+        Sure! If you win, it’s a great feeling. <br>
+        If you don't win the auction, you will never have to go away empty handed. <br>
+        The "Buy Now" option, allows you to purchase the product by huge discount up to 89% off the MRP. This discount will be based on your used Credits on that particular product .Below Discount table shows your BUY NOW discount based on your used Credits for a particular Auction/Product. Buy Now option may not available on some products. You can check before participation. Buy Now will be allowed only till 24 hours after an auction is closed. 
+    </p><br>
+    <table border="1px" cellspacing="0px" cellpadding="3px">
+        <tr>
+            <td>Total Credits Used</td>
+            <td>1 To 10</td>
+            <td>11 To 50</td>
+            <td>51 To 100</td>
+            <td>101 To 300</td>
+            <td>301 To 500</td>
+            <td>501 To 800</td>
+            <td>801 To 1000</td>
+            <td>1001 To 1500</td>
+            <td>1501 To 2000</td>
+            <td>2001 To 3000</td>
+            <td>3001 To 4000</td>
+            <td>4001 To 5000</td>
+            <td>5001 To 6000</td>
+            <td>6001 To 7000</td>
+            <td>7001 To 9000</td>
+            <td>9001 To 12000</td>
+            <td>12000 To 20000</td>
+        </tr>
+        <tr>
+            <td>Discount</td>
+            <td>1.00</td>
+            <td>3.00</td>
+            <td>5.00</td>
+            <td>8.00</td>
+            <td>10.00</td>
+            <td>13.00</td>
+            <td>16.00</td>
+            <td>20.00</td>
+            <td>23.00</td>
+            <td>26.00</td>
+            <td>30.00</td>
+            <td>40.00</td>
+            <td>50.00</td>
+            <td>60.00</td>
+            <td>70.00</td>
+            <td>80.00</td>
+            <td>89.00</td>
+        </tr>
+    </table>
+</div>
+{% endblock %} 

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}BidderBoy|Best Online Auction{% endblock %}
+
+{% block header_buttons %}
+<div class="but" style="margin-left: 800px;">
+    <a href="/profile" class="btn">Profile</a>
+    <a href="/logout" class="btn">Logout</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/upload/upload.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<nav>
+    <div class="nav-cont1">
+      <button><a href="/home">Auction Home</a></button>
+      <button><a href="/upload">Upload</a></button>
+      <button><a href="/faq">FAQ's</a></button>
+      <button><a href="/howorks">How it works</a></button>
+      <button><a href="/contact">Contact Us</a></button>
+    </div>
+</nav>
+
+<div class="body1"> 
+        <h2 align="center" class="heading">"From Upload to Sold: <br>Let the Battle of Bids Begin!"</h2>
+    <div class="custom-container" style="height: 500px;">
+        
+        <form action="/home" method="post" enctype="multipart/form-data">
+           
+            <div class="mb-3" style="margin-top: 30px;">
+                <label for="product_name" class="form-label" style="font-family:Arial, Helvetica, sans-serif">Product Name</label>
+                <input type="text" name="product_name" id="productname" class="custom-input">
+            </div><br>
+
+            
+            <div class="mb-3">
+                <label for="price" class="form-label" style="font-family:Arial, Helvetica, sans-serif">Enter price</label>
+                <input type="text" name="price" id="price" class="custom-input">
+            </div><br>
+
+            
+
+            
+            <div class="row mb-3" style="display: flex;">
+                <div class="col-md-6">
+                    <label for="start" class="form-label" style="font-family:Arial, Helvetica, sans-serif">Start from</label>
+                    <input type="date" name="start_from" id="start" class="date" style="padding: 5px;border:none;">
+                </div>
+                <div class="col-md-6" style="margin-left: 20px;">
+                    <label for="end" class="form-label" style="font-family:Arial, Helvetica, sans-serif">Ends on</label>
+                    <input type="date" name="ends_on" id="end" class="date" style="padding: 5px;border:none;">
+                </div>
+            </div><br><br>
+
+            
+            <div class="mb-3">
+                <input name="file_path" type="file" class="form-control" id="inputGroupFile02" style="border-radius: 5px;border:none;">
+            </div><br><br>
+
+            
+            <div class="mb-3">
+                <label for="des" class="form-label" style="font-family:Arial, Helvetica, sans-serif">Description</label><br>
+                <textarea name="description" id="des" rows="7" class="custom-input"></textarea>
+            </div><br><br>
+
+            
+            <button  type="submit" class="btn_btn-primary" style="font-family:Arial, Helvetica, sans-serif;margin-left: 230px;background-color: orange;border:none;padding:10px;  border-radius: 10px; width:100px; font-size:16px;">Upload</button><br>
+        </form>
+    </div>
+</div>
+<div class="img">
+    <img src="" alt="">
+</div>
+{% endblock %} 

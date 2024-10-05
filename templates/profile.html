@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin-left: 200px;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+            width: 1100px;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        hr {
+            width: 100%;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 100%;
+        }
+        .section {
+            border: 2px solid orange;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .count1 {
+            background-color: orange;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        .section input, .section textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .my_information label, .change_password label {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        .change_password input {
+            width: 100%;
+        }
+        .logout {
+            margin-top: 20px;
+            text-align: center;
+        }
+        button {
+            height: 3rem;
+            width: 6rem;
+            border: none;
+            border-radius: 6px;
+            background-color: orange;
+            font-size: 12pt;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        th, td{
+            text-align:center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>My Profile</h2>
+        <hr>
+        <div class="grid-container">
+            <div class="section my_information">
+                <div class="count1">
+                    <h3>My Information</h3>
+                </div>
+                <label for="firstname">First Name
+                    <input type="text" name="firstname" id="firstname" value={{user.firstname}} disabled>
+                </label>
+                <label for="lastname">Last Name
+                    <input type="text" name="lastname" id="lastname"  value={{user.lastname}} disabled >
+
+                </label>
+                <label for="user_name">Username
+                    <input type="text" name="user_name" id="user_name" value={{user.username}} disabled>
+                </label>
+                <label for="email">Email
+                    <input type="email" name="email" id="email" value={{user.email}} disabled>
+                </label>
+                <label for="mobile">Mobile
+                    <input type="text" name="mobile" id="mobile" maxlength="10">
+                </label>
+                <label for="DOB">Birthdate
+                    <input type="text" name="DOB" id="DOB" placeholder="Birthdate">
+                </label>
+                <label for="address">Address
+                    <textarea name="address" id="address" placeholder="Address"></textarea>
+                </label>
+                <label for="pincode">Pincode
+                    <input type="number" name="pincode" id="pincode" min="110000" max="999999" placeholder="Pincode">
+                </label>
+                <label for="city">City
+                    <input type="text" name="city" id="city" placeholder="City">
+                </label>
+                <label for="state">State
+                    <input type="text" name="state" id="state" placeholder="State">
+                </label>
+                <label for="country">Country
+                    <input type="text" name="country" id="country" placeholder="Country">
+                </label>
+            </div>
+            <div class="section change_password">
+                <div class="count1">
+                    <h3>Change Password</h3>
+                </div>
+                <label for="old_password">Old Password
+                    <input type="password" id="old_password" placeholder="Old Password">
+                </label>
+                <label for="new_password">New Password
+                    <input type="password" id="new_password" placeholder="New Password">
+                </label>
+                <label for="confirm_password">Confirm Password
+                    <input type="password" id="confirm_password" placeholder="Confirm Password">
+                </label>
+            </div>
+        </div>
+        <div class="logout">
+        
+            <button> <a href="/logout">Log Out</a></button>
+
+        </div>
+
+        <br>
+        <br>
+        <h1> Bidding History</h1>
+        <table align="center" border="2px solid" cellpadding="8" cellspacing="0" 
+        style="width:100%; color:black;font-family: Arial, Helvetica, sans-serif;border-radius: 5px;border-color:black;box-shadow: 0 0 10px black;background-color: lightblue;">
+            <tr>
+            <th>id</th>
+            <th>Product Name</th>
+            <th>Price</th>
+        </tr>
+
+        {% for data in items %}
+        <tr>
+            <td>{{data.id}}</td>
+            <td>{{data.product_name}}</td>
+            <td>{{data. estimated_price}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .btn{
+            border: none;
+            color: black;
+            background-color: orange;
+            padding: 7px;
+            border-radius: 5px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+
+
+    <div >
+        <h2 align="center" style="color:black;font-family: Arial, Helvetica, sans-serif;">Uploaded Products</h2>
+        <table align="center" border="2px solid" cellpadding="8" cellspacing="0" 
+        style="color:black;font-family: Arial, Helvetica, sans-serif;border-radius: 5px;border-color:black;box-shadow: 0 0 10px black;background-color: lightblue;">
+            <tr>
+            <th>id</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Start from</th>
+            <th>Ends on</th>
+            <th>Product Photo</th>
+            <th>Description</th>
+            <th>Delete</th>
+
+        </tr>
+
+        {% for data in uploads %}
+        <tr>
+            <td>{{data.id}}</td>
+            <td>{{data.product_name}}</td>
+            <td>{{data. price}}</td>
+            <td>{{data.start_from }}</td>
+            <td>{{data.ends_on }}</td>
+            <td>{{data.file_path}}</td>
+            <td>{{data.description}}</td>
+            <td><a href="/delete/{{data.id}}"  style="text-decoration: none;color:black ;"><button type="submit" class="btn">Delete Product</button></a></td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div><br><br>
+
+    <a href="/upload" style="margin-left: 630px;text-decoration: none;font-family: Arial, Helvetica, sans-serif;" ><button type="submit" 
+        style="color: black;background-color:orange;border: none;padding: 10px;border-radius: 10px;font-size: 17px;">Upload another product</button></a>
+</div>
+</body>
+</html> 

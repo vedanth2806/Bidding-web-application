@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}BidderBoy|Best Online Auction{% endblock %}
+
+{% block header_buttons %}
+<div class="but" style="margin-left: 800px;">
+    <a href="/profile" class="btn">Profile</a>
+    <a href="/logout" class="btn">Logout</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/home/home.css">
+
+<nav>
+    <div class="nav-cont1">
+      <button><a href="/home">Auction Home</a></button>
+      <button><a href="/upload">Upload</a></button>
+      <button><a href="/faq">FAQ's</a></button>
+      <button><a href="/howorks">How it works</a></button>
+      <button><a href="/contact">Contact Us</a></button>
+    </div>
+</nav>
+
+<div class="container">
+  <h1>Live Auctions</h1>
+  <hr />
+  <div class="cont1">
+    {% for L_product in L_products %}
+    <div class="cont1-subcont1">
+      <div class="card1">
+        <h4>{{L_product.product_name}}</h4>
+        <hr />
+        <div class="image-container1">
+          <img src="../{{L_product.file_path|replace("\\","/") }}" />
+        </div>
+        <div class="cont1-minicont1">
+          <p>Actual Price: {{L_product.price}}</p>
+          <p id="estimated">Estimated Price:{{L_product.estimated_price}}</p>
+        </div>
+        <div class="cont1-minicont2">
+          <p id="auction">Auction Id: {{L_product.id}}</p>
+        </div>
+        <div class="cont1-minicont3">
+          <form action="/bid/{{L_product.id}}", method="POST">
+
+          <div class="cont1-minicont3" >
+            <label>Enter bid</label>
+            <input placeholder="Enter bid value" name="bid_price"/>
+          </div>
+          <div class="cont1-minicont4">
+            <p id="time">Last date:{{L_product.ends_on}}</p>
+          </div>
+        </div>
+        <button onclick="submit">Bid Now</button>
+      </div>
+    </form>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h1>Featured Upcomming Auction</h1>
+  <hr />
+  <div class="cont2">
+    {% for F_product in F_products %}
+    <div class="cont2-subcont1">
+      <div class="card2">
+        <h4>{{F_product.product_name}}</h4>
+        <hr />
+        <div class="image-container2">
+          <img src="../{{F_product.file_path|replace("\\","/") }}" />
+        </div>
+        <button>Not yet started</button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <h1>Recently Closed Auction</h1>
+  <hr />
+  <div class="cont3">
+    {% for P_product in P_products %}
+    <div class="cont3-subcont1">
+      <div class="card3">
+        <h4>{{P_product.product_name}}</h4>
+        <hr />
+        <div class="image-container3">
+          <img src="../{{P_product.file_path|replace("\\","/") }}" />
+        </div>
+        <div class="cont3-minicont1">
+          <p>Item Sold: {{P_product.estimated_price}}</p>
+        </div>
+        <button>Bid closed</button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %} 

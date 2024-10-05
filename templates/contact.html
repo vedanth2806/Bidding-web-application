@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}BidderBoy|Best Online Auction{% endblock %}
+
+{% block header_buttons %}
+<div class="but" style="margin-left: 800px;">
+  <a href="/profile" class="btn">Profile</a>
+  <a href="/logout" class="btn">Logout</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/contact/contact.css">
+<nav>
+  <div class="nav-cont1">
+    <button><a href="/home">Auction Home</a></button>
+    <button><a href="/upload">Upload</a></button>
+    <button><a href="/faq">FAQ's</a></button>
+    <button><a href="/howorks">How it works</a></button>
+    <button><a href="/contact">Contact Us</a></button>
+  </div>
+</nav>
+<h2>CONTACT US</h2>
+  <hr>
+  <div class="grid-container">
+    <div class="text">
+      <form action="" method="post">
+        <div class="item">
+          <label for="name">Name:
+          <input type="text" name="name" placeholder="Name" required></label>
+          <label for="mobile">Mobile:
+          <input type="text" maxlength="10" name="mobile" placeholder="Mobile" required></label>
+          <label for="email">Email:
+          <input type="email" name="email" placeholder="Email" required></label>
+          <label for="subject">Subject:
+          <input type="text" name="subject" placeholder="Subject" required></label>
+          <label for="message">Message:
+            <textarea name="message" id="message"></textarea>
+          <!-- <input type="text" name="message" placeholder="Message" required> -->
+        </label>
+        </div>
+          <button type="submit"><strong>SEND MESSAGE</strong></button>
+      </form>
+    </div>
+    <div class="india">
+      <h1>Bidderboy Corporation - India</h1>
+      <hr class="rule">
+      <p><img src="../static/contact/homeicon.png" alt="Home Icon">
+        F-18 Silicon View, Archana-Patia Roadd, Opp: D.R World Multiplex, Parvat Patia, Surat-395010(Gujarat-India)
+      </p>
+      <p><img src="../static/contact/mailicon.png" alt="Mail Icon">
+      care {at} bidderboy {dot} com</p>
+      <p><img src="../static/contact/callicon.png" alt="phone icon">
+      +91-7048213831</p>
+      <p><img src="../static/contact/timeicon.png" alt="clock icon">
+      (Mon-Fri, 11:00am to 6:00pm)</p>
+      <div class="UK">
+        <h1>Bidderboy Corporation - UK</h1>
+        <hr class="rule">
+        <p><img src="../static/contact/homeicon.png" alt="Home Icon">
+        13, Melvishaw,Leatherhead,Surrey,London kt22 8sx United Kingdom</p>
+        <p><img src="../static/contact/mailicon.png" alt="Mail Icon">
+        info {at} bidderboy {dot} com</p>
+      </div>
+    </div>
+  </div>
+{% endblock %} 

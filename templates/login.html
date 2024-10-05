@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}BidderBoy|Best Online Auction{% endblock %}
+
+{% block header_buttons %}
+<nav>
+    <ul>
+        <li><a href="/login" class="btn">Login</a></li>
+        <li><a href="/register" class="btn">Register</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/login/login.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<div class="container">
+    <div class="left-section">
+        <img src="../static/login/login_slide.jpg" alt="login" class="login-img" style="width: 1000px;">
+    </div>
+    <div class="right-section">
+        <p style="font-size:35px;font-family:Arial, Helvetica, sans-serif;margin-bottom:5px; margin-left:130px;color:rgb(231, 146, 18) "> <u><b>User Login</b></u></p>
+         <p style="margin-top:20px;font-size:16px;font-family:'Times New Roman', Times, serif;margin-left:40px;">To keep connected with us please login with your personal<br>information by username and password 🔔</p>
+        <form action="/login" method="post">
+            <label for="username">USERNAME </label><br>
+            <input type="text" name="username"placeholder="Enter your username" required><br><br>
+            <label for="password">PASSWORD </label><br>
+            <input type="password" name="password" placeholder=" Enter Password" required>
+           
+
+            
+            <button type="Submit" class ="button">Submit</button>
+        </form><br><br><br><br>
+        {% with flash_messages = get_flashed_messages(with_categories=true) %}
+        {% if flash_messages %}
+            <script>
+                const flashMessages = JSON.parse('{{ flash_messages|tojson|safe }}');
+                flashMessages.forEach(function(message) {
+                    const category = message[0];
+                    const msg = message[1];
+
+                    Swal.fire({
+                        icon: category === 'success' ? 'success' : 'error',
+                        title: category === 'success' ? 'Success' : 'Error',
+                        text: msg
+                    });
+                });
+            </script>
+        {% endif %}
+    {% endwith %}
+        <div class="last">
+            <p style="color:rgb(140, 33, 51); margin-top:2px;margin-left:-5px;">Don't have an account?</p>
+           <a href="/register" ><button type="Submit" class="reg-btn" style="margin-left: 10px;margin-top:2px;">Register</button></a> 
+        </div>
+
+       
+    </div>
+</div>
+{% endblock %} 

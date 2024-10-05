@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}BidderBoy|Best Online Auction{% endblock %}
+
+{% block header_buttons %}
+<nav>
+    <ul>
+        <li><a href="/login" class="btn">Login</a></li>
+        <li><a href="/register" class="btn">Register</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/register/register.css">
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="alert-container">
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<div class="container2" style="margin-top: 10px;">
+    <div class="left">
+        <img src="../static/register/regimage.png" alt="regimage" class="reg-img">
+
+    </div>
+
+    <div class="right" >
+        <h1 style="margin-left:200px;color:rgb(194, 138, 17); margin-top:50px;" > FREE SIGN UP </h1><br>
+        <form action="/register" method="post">
+            <div class="first">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required><br>
+            <label for="username">Choose Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required><br>
+            </div>
+
+           <div class="second">
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required><br>
+            <label for="password">Choose password:</label>
+            <input type="text" id="password" name="password" required><br>
+            <label for="phone">Mobile:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+           </div><br><br>
+    <div class="sign">
+          <button type="submit" class="signup-btn">SIGN-UP</button>
+        </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

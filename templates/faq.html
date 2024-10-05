@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}BidderBoy|Best Online Auction{% endblock %}
+
+{% block header_buttons %}
+<div class="but" style="margin-left: 800px;">
+    <a href="/profile" class="btn">Profile</a>
+    <a href="/logout" class="btn">Logout</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/faq/faq.css">
+<nav>
+    <div class="nav-cont1">
+      <button><a href="/home">Auction Home</a></button>
+      <button><a href="/upload">Upload</a></button>
+      <button><a href="/faq">FAQ's</a></button>
+      <button><a href="/howorks">How it works</a></button>
+      <button><a href="/contact">Contact Us</a></button>
+    </div>
+</nav>
+<div class="container">
+    <h2>==Find an Answer==</h2>
+    <hr>
+    <p class="Q"><b>What is Bidderboy.com all about ? What is the concept?</b></p>
+    <p class="A">Bidderboy.com is an unique online auction platform since 2011 that allows you to BID on branded products and gives you a change to WIN products at few rupees. It’s a kind of fun bargain deals and online shopping.</p>
+    <p class="Q"><b>Who can participate in bidderboy's online auctions?</b></p>
+    <p class="A">Any one above 18+ years of age can sign up and participate in bidderboy auctions. Users from outside india / abroad can also join Bidderboy.com but they will have to pay additional shipping charges for International Shipping.</p>
+    <p class="Q"><b>How does Bidderboy auctions work?</b></p>
+    <p class="A">Registered Bidderboy users compete each other to win items. The price of the item starts at Rs.0/- and the auction clock starts counting down. Each time a bid is placed, the price of the item increases by a set amount and the auction clock's time gets reset. Once you place a bid, you’re in the lead until the auction clock runs out or someone else places a bid. When the auction clock reaches 00:00 and no more bids are received, the auction is over and the last person who bids wins the auction. winning price and winner's user ID is shown over that closed auction.</p>
+    <p class="Q"><b>How can I start bidding on bidderboy auctions?</b></p>
+    <p class="A">Getting started is very easy . First, create an account by clicking on the SIGN UP button on homepage, then, purchase any bid credits package by clicking on the TOP-UP CREDITS button. Finally, join an auction that is running live on LIVE AUCTION page by clicking on the BID button. wait till timer reaches 0:0 if you are a last bidder and clock runs out, you are a winner!</p>
+    <p class="Q"><b>What are bid credits and how much does it cost?</b></p>
+    <p class="A">To place a bid on any auction, you would need Bidderboy Credits . Each auction has an uniqne number of credits required per bid. you can purchase credits in different packs. each credit costs you Rs.7/- to Rs.10/- maximum depending on the Credit package size you order. also we provides additional discount by giving promo codes time to time.</p>
+    <p class="Q"><b>Is it legal to offer such online auction service and to participate in them?</b></p>
+    <p class="A">Yes, Absolutely. this is a new version of traditional offline auction Going 1- Going 2- SOLD. Online auctions are legal in India and we have to meet with all compliance requirements of RBI, various Banks and Payment Gateway service providers. Bidding online may be prohibited in some countries.</p>
+    <p class="Q"><b>How long does a bidderboy auction last?</b></p>
+    <p class="A">There is no pre-determined end time for auctions. An auction closes after the last person bids and /or the auction clock runs out. It also gets PAUSED if pre-defined auction hours for the day are runs out. It will resume on next day at pre-defined RESUME time.in case of any technical issues or server downtime an auction will go to PAUSED mode automatically.</p>
+    <p class="Q"><b>Does each auction have the same clock reset time?</b></p>
+    <p class="A">No, depending on the auction, there will be a reset time of 10 seconds to 2 minutes. You can check this clock reset time around any running live auction. During any running auction, clock reset timing can be reduced if too many bidders are participating on same auction. This is the real fun of bidding.</p>
+    <p class="Q"><b>Does each BID have the same price increment?</b></p>
+    <p class="A">No, depending on the MRP of the product, there will be a price increment of 10 paisa INR to 50 paisa INR per bid. you can check this rate of price increment around any running auction. Costly products will have higher price increment and vice versa.</p>
+    <p class="Q"><b>What type of products does bidderboy put here for auctions?</b></p>
+    <p class="A">Smart phones, regular phones & mobile accessories, Laptops, Notebooks, Tablets, Desktops, iPods, Music system, LED/LCD Tvs, Fashion brands and personal accessories, Sports items, Home Appliances, Gift vouchers, Holiday vouchers, Discount coupons, Biddeboy Credit packages and everything else whatever latest trends in India and most wanted by youngsters.</p>
+    <p class="Q"><b>Are all products brand new, original, with original bill and warranty?</b></p>
+    <p class="A">Absolutely Yes, All products at bidderboy are 100% brand new, original, unused, seal pack, with GST paid bill and manufacturer warranty. Products will be shipped by our 3rd party vendors and we will monitor the entire delivery process.</p>
+    <p class="Q"><b>Can I open more than one account on bidderboy?</b></p>
+    <p class="A">No. it is illegal to operate multiple accounts by single user. Our system monitors your IP address and MAC address. If you are found violating this rule, we will terminate your account permanently and your unused credits will be void.</p>
+    <p class="Q"><b>Is there any winning limit? Can I participate and win unlimited auctions?</b></p>
+    <p class="A">There is no limits at bidderboy. you can participate in unlimited auctions and also you can win unlimited products. There is no such limitations like other bidding websites</p>
+    <p class="Q"><b>How long does my bid credits valid after I purchase? are unused credits refundable?</b></p>
+    <p class="A">Credits purchased by you are always yours. it never expires. you can use them any time you want. but credits are non transferable and non-refundable. you must use credits on any auction.</p>
+    <p class="Q"><b>I just won an auction, what to do now?</b></p>
+    <p class="A">Go to MY ACCOUNT/WIN HISTORY section and complete payment of your final due amount by clicking MAKE PAYMENT link.once your payment is confirmed, we will arrange shipment of your product. you need to ensure that your shipping address and contact details are correctly updated in your MY ACCOUNT section</p>
+    <p class="Q"><b>What is AutoBid feature ? How it works?</b></p>
+    <p class="A">Auto Bid is designed for those types of situations when you cannot be online, or when you would like to have bids placed automatically for you. Simply decide how many bids you want to place and at what price your Auto Bid command will get activated. Auto Bid automatically bids for you each time someone else places a higher bid. You can rely on our Auto Bid to bid as you set it. Thus, you can participate in an auction even if you are not online and you can't miss some of the hot auctions.</p>
+    <p class="Q"><b>Are bidderboy employees allowed to place bids?</b></p>
+    <p class="A">No, bidderboy’s employees, Web developers, any person engaged directly or indirectly in bidderboy’s business process are strictly forbidden to bid on the auctions.</p>
+    <p class="Q"><b>What is prohibited while bidding at Bidderboy.com?</b></p>
+    <p class="A">
+        Below activities are strictly prohibited and it will be treated as violation of our terms and conditions
+        <ul>
+            <li>Operating multiple user accounts by a single user</li>
+            <li>Participate in an auction in a group of few users together from a same household or a same place</li>
+            <li>Using any third party bidding software/tools/scripts to place automatic bids, or to operate your account using such methods</li>
+            <li>Accessing an user account from different workstations or devices and placing BIDS using different devices at a same time during an auction</li>
+        </ul>
+    </p>
+    <p class="Q"><b>What are the payment methods to buy bid credits or to make payments for the products?</b></p>
+    <p class="A">We use RBI approved payment gateways like - CCAvenue, Oxigen & Paypal. It supports Debit Cards, Credit Cards, Wallets, Paytm, UPI, Net Banking, Cash Cards & EMI options. You may also make payment in to our bank account. contact our billing team on billing {at} bidderboy {dot} com for any assistance with the payments.</p>
+    <p class="Q"><b>My question is not listed here and I need further clarifications</b></p>
+    <p class="A">We are open minded, just contact us by filling up quick contact form on our Contact us page, we will get back to you soon with clarifications.</p>
+</div>
+{% endblock %} 

@@ -1,0 +1,45 @@
+
+.container {
+    padding: 20px;
+    margin: 0 15%;
+}
+
+h1,h2 {
+    text-align: center;
+}
+
+li {
+    font-size: 16pt;
+    margin-left: 20px;
+}
+
+p {
+    text-align: justify;
+    font-size: 14pt;
+}
+
+nav button {
+    border: none;
+    cursor: pointer;
+    background-color: orange;
+    margin-top: 15px;
+  }
+  nav {
+    background-color: orange;
+    height: 50px;
+    /* display: flex;
+    justify-content: center; */
+  }
+  .nav-cont1 {
+    margin-left: 250px;
+    margin-right: 250px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav a {
+    text-decoration: none;
+    background-color: orange;
+    color: black;
+    font-size: large;
+  }
