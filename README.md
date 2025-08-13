@@ -1,26 +1,29 @@
 Bidder Boy
 ===============
+# BidderBoy
 
-**Project Overview**
+## Project Overview
+
 BidderBoy is a comprehensive web-based auction platform that enables users to buy and sell items through competitive bidding. The system facilitates secure transactions between buyers and sellers while providing real-time auction management capabilities.
 
-Key Features
-**User Management**
-*User Registration & Authentication: Secure login/signup system with personal profile management\n
-*Profile Management: Complete user profiles with contact information, address, and bidding history\n
-*Password Management: Secure password change functionality\n
+## Key Features
 
-**Auction Management**
-*Live Auctions: Real-time bidding system with current price updates
-*Item Upload: Sellers can upload products with descriptions, images, and starting prices
-*Auction Scheduling: Set start and end dates for auctions
-*Featured Auctions: Highlight upcoming high-value auctions
+### User Management
+- **User Registration & Authentication**: Secure login/signup system with personal profile management
+- **Profile Management**: Complete user profiles with contact information, address, and bidding history
+- **Password Management**: Secure password change functionality
 
-**Bidding System**
-*Real-time Bidding: Live bid updates with automatic price increments
-*Bid History: Track all bids placed by users
-*Auction Categories: Diverse categories (Electronics, Vehicles, Antiques, etc.)
-*Recently Closed Auctions: Archive of completed sales
+### Auction Management
+- **Live Auctions**: Real-time bidding system with current price updates
+- **Item Upload**: Sellers can upload products with descriptions, images, and starting prices
+- **Auction Scheduling**: Set start and end dates for auctions
+- **Featured Auctions**: Highlight upcoming high-value auctions
+
+### Bidding System
+- **Real-time Bidding**: Live bid updates with automatic price increments
+- **Bid History**: Track all bids placed by users
+- **Auction Categories**: Diverse categories (Electronics, Vehicles, Antiques, etc.)
+- **Recently Closed Auctions**: Archive of completed sales
 
 
 **SNAPSHOTS**
