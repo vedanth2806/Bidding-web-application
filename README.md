@@ -5,10 +5,10 @@ Bidder Boy
 BidderBoy is a comprehensive web-based auction platform that enables users to buy and sell items through competitive bidding. The system facilitates secure transactions between buyers and sellers while providing real-time auction management capabilities.
 
 Key Features
-**1 User Management**
-*User Registration & Authentication: Secure login/signup system with personal profile management
-*Profile Management: Complete user profiles with contact information, address, and bidding history
-*Password Management: Secure password change functionality
+**User Management**
+*User Registration & Authentication: Secure login/signup system with personal profile management\n
+*Profile Management: Complete user profiles with contact information, address, and bidding history\n
+*Password Management: Secure password change functionality\n
 
 **Auction Management**
 *Live Auctions: Real-time bidding system with current price updates
